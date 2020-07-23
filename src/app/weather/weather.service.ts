@@ -40,3 +40,7 @@ export class WeatherService {
     return (kelvin * 9) / 5 - 459.67;
   }
 }
+
+export interface IWeatherService {
+  getCurrentWeather(city: string, country: string): Observable<ICurrentWeather>;
+}
