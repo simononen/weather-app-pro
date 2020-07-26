@@ -17,14 +17,14 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
           paths:
             - ~/.npm
-      - run: npm run style
-      - run: npm run lint
-      - run: npm run build:prod
-      - run: npm run test:coverage -- --watch=false
-      - run: npm run e2e
-      - run:
-          name: Tar & Gzip compiled app
-          command: tar zcf dist.tar.gz dist/weather-app-pro
+            - run: npm run style
+            - run: npm run lint
+            - run: npm run build:prod
+            - run: npm run test:coverage -- --watch=false
+            - run: npm run e2e
+            - run:
+                name: Tar & Gzip compiled app
+                command: tar zcf dist.tar.gz dist/weather-app-pro
       - store_artifacts:
           path: dist.tar.gz
 workflows:
