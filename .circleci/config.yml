@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:lts-browsers
-    working_directory: ~/repo
+    working_directory: ~/weather-app-pro
     steps:
       - checkout
       - restore_cache:
